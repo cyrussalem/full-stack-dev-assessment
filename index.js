@@ -36,7 +36,7 @@ async function start () {
     await clearFile(TAXABLE_ITEMS_FILE);
 
     setInterval(async () => {
-        const newLine = `item${counter}, ${counter}, ${Math.round(counter * 0.15 * 100) / 100}, ${Math.round(counter + counter * 0.15 * 100) / 100}`;
+        const newLine = `item${counter}, ${counter}, ${Math.round(counter * 0.15 * 100) / 100}, ${Math.round((counter + counter * 0.15) * 100) / 100}`;
 
         await addLineToFile(TAXABLE_ITEMS_FILE, newLine);
 
