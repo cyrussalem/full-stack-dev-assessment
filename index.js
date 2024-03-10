@@ -3,7 +3,8 @@ let counter = 1;
 const TAXABLE_ITEMS_FILE = 'data.csv';
 const UPDATE_INTERVAL = 1000;
 var MyData = [];
-var http = require('http'); //for loading http server 
+const express = require('express');
+const app = express();
 
 // Function to add a new line to a file
 async function addLineToFile(filename, line) {
@@ -62,11 +63,10 @@ function readData(data) {
     MyData.push(new test(dataArray));
 }
 
-// Create a webserver with a request listener callback.  This will write the response header with the content type as json, and end the response by sending the array in JSON format.
+// Create a webserver with a request listener callback.  This will write the response header with the content type as json, and end the response by sending the array in JSON format
 function server() {
-    var server = http.createServer(function (req, resp) {
-        resp.writeHead(200, { 'content-type': 'application/json' });
-        resp.end(JSON.stringify(MyData));
+    var server = app.get('/taxables', function (request, response) {
+        response.send(JSON.stringify(MyData));
     });
     server.listen(8080);
 }
