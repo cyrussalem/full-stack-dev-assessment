@@ -63,3 +63,4 @@ item2, 2, 0.30, 2.30
 * The Component should be using the Angular service to query for its table data
 * The frontend should continually refresh the table data without the user having to refresh the page
 * Attempt to use Observables in the Component to subscribe to table data changes which will be continually updated by the Angular Service
+

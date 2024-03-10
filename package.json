@@ -9,6 +9,7 @@
   "author": "Cyrus Salem",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "csv": "^0.3.7",
     "express": "^4.18.3"
   }

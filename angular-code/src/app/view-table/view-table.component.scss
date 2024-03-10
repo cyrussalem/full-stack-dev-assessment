@@ -1,0 +1,13 @@
+.fix-header {
+    position: fixed;
+    top: -10;
+    width: 100%;
+    z-index: 999999;
+}
+
+.sticky-header {
+    position: sticky;
+    z-index: 1;
+    height: 100px;
+    top: 0;
+}

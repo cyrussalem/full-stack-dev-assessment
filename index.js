@@ -3,8 +3,10 @@ let counter = 1;
 const TAXABLE_ITEMS_FILE = 'data.csv';
 const UPDATE_INTERVAL = 1000;
 var MyData = [];
+var cors = require('cors')
 const express = require('express');
 const app = express();
+app.use(cors())
 
 // Function to add a new line to a file
 async function addLineToFile(filename, line) {

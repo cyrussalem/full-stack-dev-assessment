@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-primary fix-header">
+    <div class="container-fluid">
+      <a class="navbar-brand">Display Real Time Table Data</a>
+    </div>
+</nav>
+  <div class="container">
+    <br><br>
+    <table class="table table-striped table-hover table-borderless table-responsive">
+        <thead class="sticky-header">
+          <tr>
+            <th class="text-primary" scope="col">Item</th>
+            <th class="text-primary" scope="col">Cost</th>
+            <th class="text-primary" scope="col">Tax</th>
+            <th class="text-primary" scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of TableValues">
+            <td>{{data.Item}}</td>
+            <td>{{data.Cost}}</td>
+            <td>{{data.Tax}}</td>
+            <td>{{data.Total}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
